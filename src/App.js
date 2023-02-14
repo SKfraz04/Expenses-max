@@ -1,12 +1,18 @@
 import "./App.css";
-import ExpenseItem from "./component/ExpenseItem";
-import ExpenseData from "./component/ExpenseData";
-import Card from "./component/Card";
+import ExpenseItem from "./component/Expenses/ExpenseItem";
+import ExpenseData from "./component/Expenses/ExpenseData";
+import Card from "./component/Ui/Card";
+import NewExpense from "./component/NewExpense/NewExpense";
 
 function App() {
+
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  }
   return (
     <Card>
-      <h1>Daily Expense</h1>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <ExpenseItem
         title={ExpenseData[0].title}
         amount={ExpenseData[0].amount}
@@ -29,6 +35,6 @@ function App() {
       />
     </Card>
   );
-}
+};
 
 export default App;
