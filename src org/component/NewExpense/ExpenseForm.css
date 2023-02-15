@@ -28,8 +28,8 @@
 
 .new-expense {
     background-color: #a892ee;
-    padding: 1rem;
-    margin: 2rem auto;
+    padding: 16px;
+    margin: 32px auto;
     width: 50rem;
     max-width: 95%;
     border-radius: 12px;
